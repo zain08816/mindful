@@ -7,12 +7,18 @@ import password
 
 app = Flask(__name__)
 
+name = ''
+
 @app.route('/', methods=["GET", "POST"])
+
+# init and set username from request
+# name = ''
 def hello():
     print("hello")
     if request.method =="POST":
         print(request.form['inputUserName'])
-        print(getLogin("Kirt99"))
+        name = request.form['inputUserName']
+        print(getLogin(name))
     return render_template('home.html')
 
 # set database password
@@ -20,9 +26,6 @@ pw = password.pw
 
 # establish connection to database
 engine = create_engine("mysql+pymysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
-
-# set name
-name='kirt99'
 
 def getLogin(username):
     with engine.connect() as con:
