@@ -3,6 +3,7 @@ import json
 from sqlalchemy import create_engine
 from sqlalchemy import sql
 import pymysql
+import password
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
-pw = ''
+pw = password.name
 
 engine = create_engine("mysql+pymysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
 
