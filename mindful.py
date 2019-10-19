@@ -1,11 +1,29 @@
 from flask import Flask, escape, request, render_template
 import json
+from sqlalchemy import create_engine
+from sqlalchemy import sql
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
     return render_template('home.html')
+
+engine = create_engine("databaseurl")
+
+
+def getLogin(username):
+    with engine.connect() as con:
+        query = sql.text(
+            "SELECT * FROM bars WHERE name = :name;"
+        )
+        rs = con.execute(query, username=name)
+        result = rs.first()
+        if result is None:
+            return None
+        return dict(result)
+
+
 
 level_names = {
     0 : 'not so bruh',
