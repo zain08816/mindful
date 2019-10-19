@@ -2,6 +2,7 @@ from flask import Flask, escape, request, render_template
 import json
 from sqlalchemy import create_engine
 from sqlalchemy import sql
+import pymysql
 
 app = Flask(__name__)
 
@@ -9,18 +10,18 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
-pw = None
+pw = ''
 
-engine = create_engine("mysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
+engine = create_engine("mysql+pymysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
 
 name='kirt99'
 
 def getLogin(username):
     with engine.connect() as con:
         query = sql.text(
-            "SELECT * FROM bars WHERE name = :name;"
+            "SELECT * FROM users WHERE username = :username;"
         )
-        rs = con.execute(query, username=name)
+        rs = con.execute(query, username=username)
         result = rs.first()
         if result is None:
             return None
