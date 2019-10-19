@@ -9,8 +9,11 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
-engine = create_engine("databaseurl")
+pw = None
 
+engine = create_engine("mysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
+
+name='kirt99'
 
 def getLogin(username):
     with engine.connect() as con:
