@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    print("hello")
+    if request.method =="POST":
+        print(request.form['inputUserName'])
+        print(getLogin("Kirt99"))
     return render_template('home.html')
 
 pw = ''
