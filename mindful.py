@@ -3,7 +3,7 @@ import json
 from sqlalchemy import create_engine
 from sqlalchemy import sql
 import pymysql
-from password import *
+import password
 
 app = Flask(__name__)
 
@@ -15,8 +15,13 @@ def hello():
         print(getLogin("Kirt99"))
     return render_template('home.html')
 
+# set database password
+pw = password.pw
+
+# establish connection to database
 engine = create_engine("mysql+pymysql://admin:{}@mindful3.c7ce4qsxirkj.us-east-2.rds.amazonaws.com/mindful".format(pw))
 
+# set name
 name='kirt99'
 
 def getLogin(username):
@@ -30,8 +35,6 @@ def getLogin(username):
             return None
         return dict(result)
 
-
-
 level_names = {
     0 : 'not so bruh',
     1 : 'bruh',
@@ -39,7 +42,6 @@ level_names = {
     3 : 'ultimate bruh',
     4 : 'Zenyatta'
 }
-
 
 exp = 0
 level = 0
