@@ -16,9 +16,9 @@ struct ProfileView: View {
                 Spacer().frame(height: 50)
                 ZStack{
                     Circle()
-                        .fill(Color("darkWhile"))
+                        .fill(Color("darkWhite"))
                         .frame(height: 230)
-                        .shadow(radius: 10)
+                        .shadow(color: Color("darkBlack").opacity(0.5),radius: 10)
                     Image(systemName: "faceid")
                         .resizable()
                         .frame(width: 200, height: 200)
@@ -26,8 +26,9 @@ struct ProfileView: View {
                 }
                 Spacer().frame(height: 80)
                 Text("Kirtan Patel").font(.largeTitle)
+                Text("Rank: Bruh").font(.title)
                 Text("Level 1")
-                    .font(.title)
+                    .font(.headline)
                 Text("Experience: 1000 xp")
                 Spacer()
             }
