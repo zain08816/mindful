@@ -10,6 +10,8 @@ import SwiftUI
 
 struct RegistrationView: View {
     @State private var name: String = ""
+    @EnvironmentObject var data: DataUtility
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
             Text("Welcome to Mindful")
@@ -20,11 +22,14 @@ struct RegistrationView: View {
             Spacer().frame(height:100)
             Image(systemName: "faceid")
                 .resizable()
-                .frame(width: 200, height: 200)
-                .padding(.bottom, 100)
-            TextField("Name", text: $name)
+                .frame(width: 150, height: 150)
+                .padding(.bottom, 50)
+            TextField("Name", text: self.$data.user.name)
                 .frame(width: 300).padding(.all)
-            Button(action: {}) {
+            Button(action: {
+                self.data.user.accountMade.toggle()
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
                 Text("Register")
                     .foregroundColor(Color.white)
             }

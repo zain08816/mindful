@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 2
+    @State private var show_modal: Bool = true
+    @EnvironmentObject var data: DataUtility
+    
     var body: some View {
         TabView(selection: $selection) {
             MeditationView().tabItem {
@@ -32,6 +35,8 @@ struct ContentView: View {
                 }
                 
             }.tag(3)
+        }.sheet(isPresented: self.$data.user.accountMade) {
+            RegistrationView().environmentObject(self.data)
         }
     }
 }

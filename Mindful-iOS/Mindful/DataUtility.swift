@@ -8,6 +8,7 @@
 
 import Foundation
 
-class DataUtility {
+class DataUtility: ObservableObject {
+    @Published var user = UserData()
     
 }

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct GoalView: View {
+    @EnvironmentObject var data: DataUtility
     var body: some View {
         ScrollView{
             VStack{

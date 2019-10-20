@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var data: DataUtility
     var body: some View {
         ZStack {
             
@@ -25,7 +26,7 @@ struct ProfileView: View {
                         .cornerRadius(100)
                 }
                 Spacer().frame(height: 80)
-                Text("Kirtan Patel").font(.largeTitle)
+                Text(self.data.user.name).font(.largeTitle)
                 Text("Rank: Bruh").font(.title)
                 Text("Level 1")
                     .font(.headline)

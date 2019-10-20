@@ -17,6 +17,7 @@ struct UserData {
         max_level = 4
         next_level_exp = 0
         next_level_name = ""
+        accountMade = true
     }
     
     var name:String
@@ -24,6 +25,7 @@ struct UserData {
     var level:Int
     let max_level:Int
     var next_level_exp:Int
+    var accountMade:Bool
     var bonus:Int {
         get {
             return level*1
