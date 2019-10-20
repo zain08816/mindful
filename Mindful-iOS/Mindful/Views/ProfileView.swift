@@ -13,7 +13,7 @@ struct ProfileView: View {
     var body: some View {
         ZStack {
             
-            VStack(spacing: 10.0){
+            VStack(spacing: 10){
                 Spacer().frame(height: 50)
                 ZStack{
                     Circle()
@@ -28,9 +28,13 @@ struct ProfileView: View {
                 Spacer().frame(height: 80)
                 Text(self.data.user.name).font(.largeTitle)
                 Text("Rank: Bruh").font(.title)
-                Text("Level 1")
+                Text("Level \(self.data.user.level)")
                     .font(.headline)
-                Text("Experience: 1000 xp")
+                Text("Experience: \(self.data.user.exp) xp")
+//                HStack{
+//                    Rectangle.frame(height: 20, width: self.data.user.exp)
+//                    Spacer()
+//                }
                 Spacer()
             }
 

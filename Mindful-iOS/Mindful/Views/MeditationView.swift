@@ -79,7 +79,7 @@ struct MeditationView: View {
                         self.rotateInOut.toggle()
                         self.scaleInOut.toggle()
                         self.moveInOut.toggle()
-                        withAnimation(.easeInOut(duration: 20.0)) {
+                        withAnimation(.easeInOut(duration: 10.0)) {
                             self.opacity = self.opacity - 1
  
                         }
