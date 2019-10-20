@@ -15,7 +15,6 @@ struct UserData {
     init() {
         name = ""
         exp = 0
-        level = 1
         max_level = 4
         accountMade = true
     }
@@ -23,9 +22,9 @@ struct UserData {
     //let goals: 
     var name:String
     var exp:Int
-    var level:Int
     let max_level:Int
     var accountMade:Bool
+    var perviousLevel:Int = 0
     
     var next_level_exp:Int {
         get {
@@ -44,15 +43,23 @@ struct UserData {
             return bonus + 4
         }
     }
-    
-   
-    
-
+    var level:Int {
+        get  {
+            return Int(exp/10)
+        }
+    }
+        
     let level_names = [
-        1 : "bruh",
-        2 : "super bruh",
-        3 : "ultimate bruh",
-        4 : "Zenyatta"
+        1 : "Aware",
+        2 : "Mindful",
+        3 : "Thoughtful",
+        4 : "Calm",
+        5 : "Serenity",
+        6 : "Relaxed",
+        7 : "Zen",
+        8 : "!Kirt",
+        9 : "Sentient",
+        10 : "Zenyatta"
     ]
     var daily_goals = [
         "Meditate for 10 minutes." : false,
@@ -62,17 +69,18 @@ struct UserData {
         "Get 7 to 8 hrs of sleep" : false
     ]
     
-    
-    
-    mutating func check_rankup(level: Int, next_level_exp: Int, exp: Int){
-        if (level != max_level) && (exp >= next_level_exp) {
-            self.level = level + 1
-            self.exp = exp - next_level_exp
-        }
+    mutating func demo_reset(daily_goals: Dictionary<String, Bool>) {
+        self.daily_goals = [
+            "Meditate for 10 minutes." : false,
+            "Tell yourself something potitive." : false,
+            "Excerise or take a walk." : false,
+            "Do something you enjoy." : false,
+            "Get 7 to 8 hrs of sleep" : false
+        ]
     }
     
-        
     
+        
     static func save_data(level: Int, exp: Int, defaults: UserDefaults) {
         defaults.set(level, forKey: "level")
         defaults.set(exp, forKey: "experience")
