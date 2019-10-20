@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = 1
     var body: some View {
-        Text("Hello World")
+        TabView(selection: $selection) {
+            MeditationView().tabItem {
+                VStack {
+                    Image(systemName: "heart.circle.fill")
+                    Text("Meditation")
+                }
+                
+            }.tag(1)
+            GoalView().tabItem {               VStack {
+                    Image(systemName: "pencil")
+                    Text("Task")
+                }
+                
+            }.tag(2)
+            ProfileView().tabItem {
+                VStack {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
+                
+            }.tag(3)
+        }
     }
 }
 
