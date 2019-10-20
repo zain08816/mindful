@@ -13,7 +13,6 @@ userdata = None
 @app.route('/', methods=["GET", "POST"])
 
 # init and set username from request
-# name = ''
 def hello():
     print("hello")
     if request.method =="POST":
@@ -47,6 +46,7 @@ def getLogin(username):
         result = rs.first()
         if result == None:
             genNewUser( username )
+        
         return result
 
 def generateNewUserJSON( user ):
