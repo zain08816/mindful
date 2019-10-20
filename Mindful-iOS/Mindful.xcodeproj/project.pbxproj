@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3BB2931D235BF292006C3E2C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2931C235BF292006C3E2C /* UserData.swift */; };
 		3BB2931F235C0D0A006C3E2C /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2931E235C0D0A006C3E2C /* DataUtility.swift */; };
+		3BB29321235C8528006C3E2C /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB29320235C8528006C3E2C /* DateUtility.swift */; };
+		3BB29323235C863E006C3E2C /* DefaultsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB29322235C863E006C3E2C /* DefaultsUtility.swift */; };
 		A062B885235BE68700F96DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B884235BE68700F96DB7 /* AppDelegate.swift */; };
 		A062B887235BE68700F96DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B886235BE68700F96DB7 /* SceneDelegate.swift */; };
 		A062B889235BE68700F96DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B888235BE68700F96DB7 /* ContentView.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		3BB2931C235BF292006C3E2C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BB2931E235C0D0A006C3E2C /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
+		3BB29320235C8528006C3E2C /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
+		3BB29322235C863E006C3E2C /* DefaultsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsUtility.swift; sourceTree = "<group>"; };
 		A062B881235BE68700F96DB7 /* Mindful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062B884235BE68700F96DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A062B886235BE68700F96DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				A062B884235BE68700F96DB7 /* AppDelegate.swift */,
+				3BB29320235C8528006C3E2C /* DateUtility.swift */,
+				3BB29322235C863E006C3E2C /* DefaultsUtility.swift */,
 				3BB2931E235C0D0A006C3E2C /* DataUtility.swift */,
 				3BB2931C235BF292006C3E2C /* UserData.swift */,
 				A062B886235BE68700F96DB7 /* SceneDelegate.swift */,
@@ -172,7 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB29321235C8528006C3E2C /* DateUtility.swift in Sources */,
 				A062B89A235BEA6900F96DB7 /* ProfileView.swift in Sources */,
+				3BB29323235C863E006C3E2C /* DefaultsUtility.swift in Sources */,
 				A062B885235BE68700F96DB7 /* AppDelegate.swift in Sources */,
 				A062B89C235BEA7A00F96DB7 /* GoalView.swift in Sources */,
 				A062B8A0235BF1E100F96DB7 /* RegistrationView.swift in Sources */,
