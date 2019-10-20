@@ -20,7 +20,7 @@ struct RegistrationView: View {
                 .multilineTextAlignment(.center)
                 .padding(.all)
             Spacer().frame(height:100)
-            Image(systemName: "faceid")
+            Image("Icon")
                 .resizable()
                 .frame(width: 150, height: 150)
                 .padding(.bottom, 50)
@@ -30,7 +30,7 @@ struct RegistrationView: View {
                 self.data.user.accountMade.toggle()
                 self.presentationMode.wrappedValue.dismiss()
                 DefaultsUtility.set_defaults(data: self.data.user)
-                self.data.user.accountMade = true
+                self.data.user.accountMade = false
                 
             }) {
                 Text("Register")

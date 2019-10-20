@@ -23,7 +23,6 @@ class DefaultsUtility {
         let defaults = UserDefaults.standard
         var data = UserData()
         
-        data.level = defaults.object(forKey: "level") as? Int ?? Int ()
         data.exp = defaults.object(forKey: "experience") as? Int ?? Int ()
         data.daily_goals = defaults.object(forKey: "daily_goals") as? [String: Bool] ?? [String: Bool] ()
         data.accountMade = defaults.object(forKey: "accountMade") as? Bool ?? Bool ()

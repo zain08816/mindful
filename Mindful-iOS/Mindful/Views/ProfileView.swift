@@ -27,7 +27,7 @@ struct ProfileView: View {
                 }
                 Spacer().frame(height: 80)
                 Text(self.data.user.name).font(.largeTitle)
-                Text("Rank: Bruh").font(.title)
+                Text("Rank: \(self.data.user.level_names[self.data.user.level]!)").font(.title)
                 Text("Level \(self.data.user.level)")
                     .font(.headline)
                 Text("Experience: \(self.data.user.exp) xp")
