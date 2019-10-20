@@ -17,8 +17,6 @@ struct UserData {
         exp = 0
         level = 1
         max_level = 4
-        next_level_exp = 0
-        next_level_name = ""
         accountMade = true
     }
     
@@ -27,19 +25,27 @@ struct UserData {
     var exp:Int
     var level:Int
     let max_level:Int
-    var next_level_exp:Int
     var accountMade:Bool
+    
+    var next_level_exp:Int {
+        get {
+            return level*10
+        }
+    }
+
     var bonus:Int {
         get {
             return level*1
         }
     }
+    
     var daily_points:Int {
         get {
             return bonus + 4
         }
     }
-    var next_level_name:String
+    
+   
     
 
     let level_names = [
@@ -58,17 +64,6 @@ struct UserData {
     
     
     
-    
-    mutating func check_next_rank(level: Int){
-        if self.level != self.max_level {
-            self.next_level_name = level_names[level+1]!
-        } else {
-            self.next_level_name = "Max Level"
-        }
-        
-    }
-    
-    
     mutating func check_rankup(level: Int, next_level_exp: Int, exp: Int){
         if (level != max_level) && (exp >= next_level_exp) {
             self.level = level + 1
@@ -78,15 +73,12 @@ struct UserData {
     
         
     
-    func save_data(level: Int, exp: Int, defaults: UserDefaults) {
+    static func save_data(level: Int, exp: Int, defaults: UserDefaults) {
         defaults.set(level, forKey: "level")
         defaults.set(exp, forKey: "experience")
         
     }
     
     
-    
-
-
 
 }

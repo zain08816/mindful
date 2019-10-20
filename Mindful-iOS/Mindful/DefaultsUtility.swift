@@ -30,4 +30,22 @@ class DefaultsUtility {
         
         return data
     }
+    
+    static func refresh() {
+        let defaults = UserDefaults.standard
+        let lastAccessDate = UserDefaults.lastAccessDate!
+        let daily_goals = [
+            "Meditate for 10 minutes." : false,
+            "Tell yourself something potitive." : false,
+            "Excerise or take a walk." : false,
+            "Do something you enjoy." : false,
+            "Get 7 to 8 hrs of sleep" : false
+        ]
+        
+        if !Calendar.current.isDateInToday(lastAccessDate) {
+            defaults.set(daily_goals, forKey: "daily_goals")
+        }
+    }
+    
+    
 }
