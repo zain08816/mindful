@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct userData {
+struct UserData {
     
     init() {
         name = ""
