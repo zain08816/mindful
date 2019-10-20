@@ -17,11 +17,9 @@ userdata = None
 def hello():
     print("hello")
     if request.method =="POST":
-        print(request.form['inputUserName'])
-        name = request.form['inputUserName']
+        print(request.form['inputUserName'].lower())
+        name = request.form['inputUserName'].lower()
         userdata = getLogin(name)
-        # while userdata != None:
-        #     counter = 0
         textfile = open('data.json', 'w')
         textfile.write(str(userdata))
         textfile.close()
@@ -47,47 +45,53 @@ def getLogin(username):
         )
         rs = con.execute(query, username=username)
         result = rs.first()
-        if result is None:
-            return None
-        return dict(result)
+        if result == None:
+            genNewUser( username )
+        return result
 
-level_names = {
-    0 : 'not so bruh',
-    1 : 'bruh',
-    2 : 'super bruh',
-    3 : 'ultimate bruh',
-    4 : 'Zenyatta'
-}
+def generateNewUserJSON( user ):
+    level_names = {
+        0 : 'not so bruh',
+        1 : 'bruh',
+        2 : 'super bruh',
+        3 : 'ultimate bruh',
+        4 : 'Zenyatta'
+    }
 
-exp = 0
-level = 0
-max_level = len(level_names)-1
+    exp = 0
+    level = 0
+    max_level = len(level_names)-1
 
-next_level_exp = level*10
+    next_level_exp = level*10
 
-if level != max_level:
-    next_level_name = level_names[level+1]
-else:
-    next_level_name = 'MAX LEVEL'
+    if level != max_level:
+        next_level_name = level_names[level+1]
+    else:
+        next_level_name = 'MAX LEVEL'
 
-if (level != max_level) and (exp == next_level_exp):
-    level += 1
+    if (level != max_level) and (exp == next_level_exp):
+        level += 1
 
+    frontend_package = {
+        'user_name' : user,
+        'level' : level,
+        'exp' : exp,
+        'level_name' : level_names[level],
+        'next_level_name' : next_level_name
+    }
 
+    frontend_json = json.dumps(frontend_package)
 
+    return frontend_json
 
-frontend_package = {
-    'user_name' : '',
-    'level' : level,
-    'exp' : exp,
-    'level_name' : level_names[level],
-    'next_level_name' : next_level_name
-}
-
-frontend_json = json.dumps(frontend_package)
-
-print(frontend_json)
-
+def genNewUser(username):
+    with engine.connect() as con:
+        query = sql.text(
+            "INSERT INTO users values( :username, :json )"
+        )
+        json = generateNewUserJSON(username)
+        rs = con.execute( query, username=username, json=json )
+        return json
 
 if __name__ == '__main__':
     app.run(debug=True)
