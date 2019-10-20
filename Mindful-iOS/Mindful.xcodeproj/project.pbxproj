@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BB2931B235BEC8E006C3E2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2931A235BEC8E006C3E2C /* ContentView.swift */; };
 		A062B885235BE68700F96DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B884235BE68700F96DB7 /* AppDelegate.swift */; };
 		A062B887235BE68700F96DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B886235BE68700F96DB7 /* SceneDelegate.swift */; };
 		A062B889235BE68700F96DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B888235BE68700F96DB7 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BB2931A235BEC8E006C3E2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A062B881235BE68700F96DB7 /* Mindful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A062B884235BE68700F96DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A062B886235BE68700F96DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A062B884235BE68700F96DB7 /* AppDelegate.swift */,
+				3BB2931A235BEC8E006C3E2C /* ContentView.swift */,
 				A062B886235BE68700F96DB7 /* SceneDelegate.swift */,
 				A062B898235BE9C200F96DB7 /* Views */,
 				A062B88A235BE68C00F96DB7 /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 			files = (
 				A062B89A235BEA6900F96DB7 /* ProfileView.swift in Sources */,
 				A062B885235BE68700F96DB7 /* AppDelegate.swift in Sources */,
+				3BB2931B235BEC8E006C3E2C /* ContentView.swift in Sources */,
 				A062B89C235BEA7A00F96DB7 /* GoalView.swift in Sources */,
 				A062B887235BE68700F96DB7 /* SceneDelegate.swift in Sources */,
 				A062B89E235BEA9200F96DB7 /* MeditationView.swift in Sources */,
