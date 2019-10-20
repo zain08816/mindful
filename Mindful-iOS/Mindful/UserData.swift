@@ -50,6 +50,7 @@ struct UserData {
     }
         
     let level_names = [
+        0 : "New",
         1 : "Aware",
         2 : "Mindful",
         3 : "Thoughtful",
