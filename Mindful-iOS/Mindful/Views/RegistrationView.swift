@@ -29,6 +29,9 @@ struct RegistrationView: View {
             Button(action: {
                 self.data.user.accountMade.toggle()
                 self.presentationMode.wrappedValue.dismiss()
+                DefaultsUtility.set_defaults(data: self.data.user)
+                self.data.user.accountMade = true
+                
             }) {
                 Text("Register")
                     .foregroundColor(Color.white)

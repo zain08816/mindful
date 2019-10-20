@@ -10,6 +10,8 @@ import Foundation
 
 struct UserData {
     
+    let defaults = UserDefaults.standard
+    
     init() {
         name = ""
         exp = 0
@@ -20,6 +22,7 @@ struct UserData {
         accountMade = true
     }
     
+    //let goals: 
     var name:String
     var exp:Int
     var level:Int
@@ -38,7 +41,6 @@ struct UserData {
     }
     var next_level_name:String
     
-    let defaults = UserDefaults.standard
 
     let level_names = [
         1 : "bruh",
@@ -46,15 +48,14 @@ struct UserData {
         3 : "ultimate bruh",
         4 : "Zenyatta"
     ]
-    
-    
-    let daily_goals = [
+    var daily_goals = [
         "Meditate for 10 minutes." : false,
         "Tell yourself something potitive." : false,
         "Excerise or take a walk." : false,
         "Do something you enjoy." : false,
         "Get 7 to 8 hrs of sleep" : false
     ]
+    
     
     
     
