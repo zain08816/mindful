@@ -10,14 +10,28 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack(spacing: 10.0){
-            Image(systemName: "faceid")
-                .resizable()
-                .frame(width: 100, height: 100)
-            Text("Kirtan Patel").font(.largeTitle)
-            Text("Level 1")
-                .font(.title)
-            Text("Experience: 1000 xp")
+        ZStack {
+            
+            VStack(spacing: 10.0){
+                Spacer().frame(height: 50)
+                ZStack{
+                    Circle()
+                        .fill(Color("darkWhile"))
+                        .frame(height: 230)
+                        .shadow(radius: 10)
+                    Image(systemName: "faceid")
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .cornerRadius(100)
+                }
+                Spacer().frame(height: 80)
+                Text("Kirtan Patel").font(.largeTitle)
+                Text("Level 1")
+                    .font(.title)
+                Text("Experience: 1000 xp")
+                Spacer()
+            }
+
         }
     }
 }
