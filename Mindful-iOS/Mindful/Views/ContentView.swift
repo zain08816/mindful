@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 1
+    @State private var selection = 2
     var body: some View {
         TabView(selection: $selection) {
             MeditationView().tabItem {
                 VStack {
                     Image(systemName: "heart.circle.fill")
-                    Text("Meditation")
+                    Text("Mindfulness")
                 }
                 
             }.tag(1)
