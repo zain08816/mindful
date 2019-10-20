@@ -1,4 +1,4 @@
-from flask import Flask, escape, request, render_template
+from flask import Flask, escape, request, render_template, redirect
 import json
 from sqlalchemy import create_engine
 from sqlalchemy import sql
@@ -8,6 +8,7 @@ import password
 app = Flask(__name__)
 
 name = ''
+userdata = None
 
 @app.route('/', methods=["GET", "POST"])
 
@@ -18,9 +19,21 @@ def hello():
     if request.method =="POST":
         print(request.form['inputUserName'])
         name = request.form['inputUserName']
-        print(getLogin(name))
+        userdata = getLogin(name)
+        # while userdata != None:
+        #     counter = 0
+        textfile = open('data.json', 'w')
+        textfile.write(str(userdata))
+        textfile.close()
+        return redirect('/dashboard')
     return render_template('home.html')
 
+@app.route('/dashboard', methods=["GET", "POST"])
+def dashboard():
+    print(userdata)
+    f = open("data.json", "r")
+    test = f.read()
+    return render_template('dashboard.html', data = str(test))
 # set database password
 pw = password.pw
 
