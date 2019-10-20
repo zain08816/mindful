@@ -33,7 +33,7 @@ struct GoalView: View {
                                     
                                 }) {
                                     HStack{
-                                        Text("Walk outside for 30 minutes")
+                                        Text("Meditate for 10 minutes.")
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color("darkWhite"))
@@ -46,7 +46,7 @@ struct GoalView: View {
                                 }
                             } else {
                                 HStack{
-                                    Text("Walk outside for 30 minutes")
+                                    Text("Meditate for 10 minutes.")
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("darkWhite"))
@@ -63,7 +63,7 @@ struct GoalView: View {
                                     self.data.user.exp += 5
                                 }) {
                                     HStack{
-                                        Text("Meditate for 15 minutes")
+                                        Text("Tell yourself something potitive.")
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color("darkWhite"))
@@ -76,7 +76,7 @@ struct GoalView: View {
                                 }
                             } else {
                                 HStack{
-                                    Text("Meditate for 15 minutes")
+                                    Text("Tell yourself something potitive.")
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("darkWhite"))
@@ -93,7 +93,7 @@ struct GoalView: View {
                                     self.data.user.exp += 5
                                 }) {
                                     HStack{
-                                        Text("Meditate for 30 minutes")
+                                        Text("Excerise or take a walk.")
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color("darkWhite"))
@@ -106,7 +106,7 @@ struct GoalView: View {
                                 }
                             } else {
                                 HStack{
-                                    Text("Meditate for 30 minutes")
+                                    Text("Excerise or take a walk.")
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("darkWhite"))
@@ -123,7 +123,7 @@ struct GoalView: View {
                                     self.data.user.exp += 5
                                 }) {
                                     HStack{
-                                        Text("Meditate for 30 minutes")
+                                        Text("Do something you enjoy.")
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color("darkWhite"))
@@ -136,7 +136,7 @@ struct GoalView: View {
                                 }
                             } else {
                                 HStack{
-                                    Text("Meditate for 30 minutes")
+                                    Text("Do something you enjoy.")
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("darkWhite"))
@@ -153,7 +153,7 @@ struct GoalView: View {
                                     self.data.user.exp += 5
                                 }) {
                                     HStack{
-                                        Text("Meditate for 30 minutes")
+                                        Text("Get 7 to 8 hrs of sleep")
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color("darkWhite"))
@@ -166,7 +166,7 @@ struct GoalView: View {
                                 }
                             } else {
                                 HStack{
-                                    Text("Meditate for 30 minutes")
+                                    Text("Get 7 to 8 hrs of sleep")
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color("darkWhite"))

@@ -24,7 +24,7 @@ class DefaultsUtility {
         var data = UserData()
         
         data.exp = defaults.object(forKey: "experience") as? Int ?? Int ()
-        data.daily_goals = defaults.object(forKey: "daily_goals") as? [String: Bool] ?? [String: Bool] ()
+        data.daily_goals = defaults.object(forKey: "daily_goals") as? [Int: String] ?? [Int: String] ()
         data.accountMade = defaults.object(forKey: "accountMade") as? Bool ?? Bool ()
         
         return data
@@ -34,11 +34,11 @@ class DefaultsUtility {
         let defaults = UserDefaults.standard
         let lastAccessDate = UserDefaults.lastAccessDate!
         let daily_goals = [
-            "Meditate for 10 minutes." : false,
-            "Tell yourself something potitive." : false,
-            "Excerise or take a walk." : false,
-            "Do something you enjoy." : false,
-            "Get 7 to 8 hrs of sleep" : false
+            1: "Meditate for 10 minutes.",
+            2: "Tell yourself something potitive.",
+            3: "Excerise or take a walk.",
+            4: "Do something you enjoy.",
+            5: "Get 7 to 8 hrs of sleep"
         ]
         
         if !Calendar.current.isDateInToday(lastAccessDate) {

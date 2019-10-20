@@ -57,25 +57,25 @@ struct UserData {
         5 : "Serenity",
         6 : "Relaxed",
         7 : "Zen",
-        8 : "!Kirt",
-        9 : "Sentient",
+        8 : "Sentient",
+        9 : "Trancended",
         10 : "Zenyatta"
     ]
     var daily_goals = [
-        "Meditate for 10 minutes." : false,
-        "Tell yourself something potitive." : false,
-        "Excerise or take a walk." : false,
-        "Do something you enjoy." : false,
-        "Get 7 to 8 hrs of sleep" : false
+        1: "Meditate for 10 minutes.",
+        2: "Tell yourself something potitive.",
+        3: "Excerise or take a walk.",
+        4: "Do something you enjoy.",
+        5: "Get 7 to 8 hrs of sleep"
     ]
     
-    mutating func demo_reset(daily_goals: Dictionary<String, Bool>) {
+    mutating func demo_reset(daily_goals: Dictionary<Int, String>) {
         self.daily_goals = [
-            "Meditate for 10 minutes." : false,
-            "Tell yourself something potitive." : false,
-            "Excerise or take a walk." : false,
-            "Do something you enjoy." : false,
-            "Get 7 to 8 hrs of sleep" : false
+            1: "Meditate for 10 minutes.",
+            2: "Tell yourself something potitive.",
+            3: "Excerise or take a walk.",
+            4: "Do something you enjoy.",
+            5: "Get 7 to 8 hrs of sleep"
         ]
     }
     
