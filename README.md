@@ -10,7 +10,7 @@ Mindful is an iOS app that turns improving your mental health into an engaging a
 * Several implementation redesigns, realizing that some implementations didn't fit the concept's needs.
 
 ### TODO
-1. Implement tasks
+1. Implement long term and self adding tasks
 2. Link users together
 3. Clean up UI
 
