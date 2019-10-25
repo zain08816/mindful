@@ -1,7 +1,8 @@
-# mindful
+# Mindful
+All too often people neglect their mental health. The idea of Mindful is to improve mental health on a daily basis to prevent neglect from ever starting and snowballing. 
 
 ### Summary
-Mindful is an iOS app that turns improving your mental health into an RPG! Collect EXP and level up your avatar by completing tasks that reduce stress and help you remain calm. Mindful implements SwiftUI.
+Mindful is an iOS app that turns improving your mental health into an engaging activty that eventually forms intrinsic motiviation. Collect EXP and level up your avatar by completing tasks that reduce stress and help you remain calm. Mindful implements SwiftUI.
 
 ### Challenges
 * Utilizing SwiftUI.
@@ -10,8 +11,6 @@ Mindful is an iOS app that turns improving your mental health into an RPG! Colle
 
 ### TODO
 1. Implement tasks
-2. Get user defaults to work
+2. Link users together
 3. Clean up UI
-4. Devpost
-	a. Record video for devpost
-	b. Describe contributions on Devpost.
+
